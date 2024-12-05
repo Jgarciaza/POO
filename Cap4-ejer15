@@ -1,0 +1,30 @@
+# Solicitar los pesos de las esferas X, Y, Z y W
+peso_x = int(input("Introduce el peso de la esfera X: "))
+peso_y = int(input("Introduce el peso de la esfera Y: "))
+peso_z = int(input("Introduce el peso de la esfera Z: "))
+peso_w = int(input("Introduce el peso de la esfera W: "))
+
+# Determinar cuál es la esfera diferente y si tiene mayor o menor peso
+if (peso_x == peso_y) and (peso_x == peso_z):
+    if peso_w > peso_x:
+        print("La esfera W es la diferente y tiene mayor peso.")
+    else:
+        print("La esfera W es la diferente y tiene menor peso.")
+elif (peso_x == peso_y) and (peso_x == peso_w):
+    print("La esfera Z es la diferente.")
+    if peso_z > peso_x:
+        print("Y tiene mayor peso.")
+    else:
+        print("Y tiene menor peso.")
+elif (peso_x == peso_z) and (peso_x == peso_w):
+    print("La esfera Y es la diferente.")
+    if peso_y > peso_x:
+        print("Y tiene mayor peso.")
+    else:
+        print("Y tiene menor peso.")
+else:
+    print("La esfera X es la diferente.")
+    if peso_x > peso_y:
+        print("Y tiene mayor peso.")
+    else:
+        print("Y tiene menor peso.")
